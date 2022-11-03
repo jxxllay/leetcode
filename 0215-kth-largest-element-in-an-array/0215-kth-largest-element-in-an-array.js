@@ -4,6 +4,5 @@
  * @return {number}
  */
 var findKthLargest = function(nums, k) {
-    nums.sort((a,b) => a-b);
-    return nums[nums.length-k];
+    return nums.sort((a,b) => b - a)[k - 1]
 };
