@@ -3,11 +3,7 @@
  * @return {number[]}
  */
 var arrayRankTransform = function(arr) {
-  let nums=new Set(arr);
-  let num1=[...nums].sort((a,b)=>(a-b));
-   let newArr=[];
-    for(i=0;i<arr.length;i++){
-        newArr.push(num1.indexOf(arr[i])+1)
-    }
-    return newArr
+    const map = new Map();
+    [...new Set(arr)].sort((a, b) => a - b).forEach((x, i) => map.set(x, i + 1));
+        return arr.map(x => map.get(x));
 };
