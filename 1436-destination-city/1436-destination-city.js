@@ -3,7 +3,7 @@
  * @return {string}
  */
 var destCity = function(paths) {
-       var cities = [];
+       let cities = [];
        for(let i=0; i<paths.length; i++){
         cities.push(paths[i][0]);
     }
