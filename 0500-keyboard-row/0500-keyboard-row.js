@@ -10,9 +10,9 @@ var findWords = function(words) {
     
     words.forEach(x => {
         let split = x.toLowerCase().split('');
-        if(split.every(j => first.includes(j))) res.push(x)
-        if(split.every(j => second.includes(j))) res.push(x)
-        if(split.every(j => third.includes(j))) res.push(x)
-    })
+        if(split.every(j => first.includes(j))) res.push(x);
+        if(split.every(j => second.includes(j))) res.push(x);
+        if(split.every(j => third.includes(j))) res.push(x);
+    });
     return res;
 };
