@@ -3,19 +3,19 @@
  * @return {boolean}
  */
 var uniqueOccurrences = function(arr) {
-    let res = {}
+    let res = {};
         if((Array.from(new Set(arr)).length === arr.length)){
-            return false
+            return false;
          }
-        for(i of arr){
-            res[i] ? (res[i] +=1) : res[i] = 1
+        for(var i of arr){
+            res[i] ? (res[i] +=1) : res[i] = 1;
          }
-    let outlet = []
-        for(i in res){
+    let outlet = [];
+        for(var i in res){
         if(outlet.includes(res[i])){
-            return false
+            return false;
          }
-        outlet.push(res[i])
+        outlet.push(res[i]);
     }
-    return res
+    return res;
 };
