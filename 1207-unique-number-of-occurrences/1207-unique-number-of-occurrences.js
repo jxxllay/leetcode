@@ -11,7 +11,7 @@ var uniqueOccurrences = function(arr) {
             res[i] ? (res[i] +=1) : res[i] = 1;
          }
     let outlet = [];
-        for(var i in res){
+        for(i in res){
         if(outlet.includes(res[i])){
             return false;
          }
