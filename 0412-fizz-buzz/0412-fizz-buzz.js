@@ -13,6 +13,6 @@ var fizzBuzz = function(n) {
                 res.push('Buzz');
             } else 
                 res.push(i.toString());
-    };
+    }
      return res;
 };
