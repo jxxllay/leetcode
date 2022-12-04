@@ -14,10 +14,10 @@ var toGoatLatin = function(sentence) {
             arr[i] = word;
         }
         else {
-            let newEnding = word[0];
-            let newWord = word.slice(1) + newEnding + 'ma';
-            newWord += 'a'.repeat(i + 1);
-            arr[i] = newWord;
+            let end = word[0];
+            let updated = word.slice(1) + end + 'ma';
+            updated += 'a'.repeat(i + 1);
+            arr[i] = updated;
         }
     }
     return arr.join(' ')
