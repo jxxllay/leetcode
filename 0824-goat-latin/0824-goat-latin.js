@@ -3,12 +3,22 @@
  * @return {string}
  */
 var toGoatLatin = function(sentence) {
-    const vowels = ['a', 'e', 'i', 'o', 'u'];
-    return sentence
-		.split(' ')
-        .map((word, i) => vowels.includes(word[0].toLowerCase()) ? 
-             [...word, 'ma', ...Array(i + 1).fill('a')].join('') 
-             : 
-             [...word.slice(1), word[0], 'ma', ...Array(i + 1).fill('a')].join(''))
-        .join(' '); 
+    let vowels = 'aeiouAEIOU';
+    let arr = sentence.split(' ')
+    
+        for (let i = 0; i < arr.length; i++) {
+            let word = arr[i];
+        if (vowels.includes(word[0])) {
+            word += 'ma';
+            word += 'a'.repeat(i + 1);  
+            arr[i] = word;
+        }
+        else {
+            let newEnding = word[0];
+            let newWord = word.slice(1) + newEnding + 'ma';
+            newWord += 'a'.repeat(i + 1);
+            arr[i] = newWord;
+        }
+    }
+    return arr.join(' ')
 };
