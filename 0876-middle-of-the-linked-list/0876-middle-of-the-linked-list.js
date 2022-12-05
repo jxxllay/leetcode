@@ -13,7 +13,7 @@ var middleNode = function(head) {
     let res = head, one = head;
       while (one !== null) {
         one = one.next;
-      if (one == null) break;
+      if (one === null) break;
         else one = one.next;
         res = res.next;
     }
